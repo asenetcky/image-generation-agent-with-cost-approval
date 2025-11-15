@@ -2,9 +2,14 @@ import os
 from dotenv import load_dotenv
 from agent import image_agent
 
-load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+try:
+    load_dotenv()
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+except Exception as e:
+    print(
+        f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
+    )
 
 
 def main():
