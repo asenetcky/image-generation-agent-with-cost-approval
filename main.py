@@ -8,7 +8,7 @@ try:
     GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 except Exception as e:
     print(
-        f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
+        f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your environment. Details: {e}"
     )
 
 
